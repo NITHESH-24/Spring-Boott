@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="credentials" class="org.example.Credentials">
+        <property name="username" value="sri123"/>
+        <property name="password" value="pass123"/>
+    </bean>
+
+    <bean id="fee" class="org.example.Fee">
+        <property name="amount" value="15000"/>
+        <property name="status" value="Paid"/>
+    </bean>
+
+    <bean id="marks" class="org.example.Marks">
+        <property name="subject1" value="85"/>
+        <property name="subject2" value="78"/>
+        <property name="subject3" value="92"/>
+    </bean>
+
+    <bean id="student" class="org.example.Student">
+        <property name="name" value="Sriram"/>
+        <property name="rollNo" value="101"/>
+        <property name="credentials" ref="credentials"/>
+        <property name="fee" ref="fee"/>
+        <property name="marks" ref="marks"/>
+    </bean>
+
+</beans>
